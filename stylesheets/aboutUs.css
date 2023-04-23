@@ -1,0 +1,263 @@
+/* sizing and position of the banner image */
+.aboutUsBanner {
+    position: relative;
+    height: 70vh;
+}
+
+.aboutUsBanner img {
+    position: relative;
+    top: -75px;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(65%);
+}
+
+/* positioning of the overlay on top of banner */
+.aboutUsBannerOverlay {
+    display: flex;
+    gap: 3vw;
+    top: 17.5%;
+    right: 0%;
+    margin-right: 15%;
+    position: absolute;
+}
+
+.aboutUsBannerOverlay ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0%;
+    margin-left: auto;
+}
+
+/* styling of content within overlay */
+.aboutUsBannerOverlay li {
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+    color: rgba(247, 247, 247, 1);
+    list-style: none;
+    border-bottom: 2.5px solid transparent;
+    transition: all .25s;
+}
+
+/* hover effect of internation branding tags */
+.aboutUsBannerOverlay li:hover {
+    border-bottom: 2.5px solid rgba(216, 206, 116, 1);
+}
+
+.aboutUs {
+    background-color: white;
+}
+
+/* position of the about us container */
+.aboutUsContent {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: white;
+}
+
+/* stying of about us content */
+.aboutUs h2 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+.aboutUs p {
+    font-size: 1.25rem;
+    font-family: 'EB Garamond', serif;
+    line-height: 1.75;
+}
+
+.aboutUsContent p:nth-child(3) {
+    margin-bottom: 0%;
+    padding-bottom: 5rem;
+}
+
+.statsContainer {
+    background-color: white;
+}
+
+/* positioning of global statistics container */
+.statsContent {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+}
+
+/* styling of global statisitics and editorial team content */
+.globalStats, .teamInfo {
+    font-family: "Helvetica", "Arial", sans-serif;
+    width: 50%;
+}
+
+.title, .teamInfoTitle {
+    border-bottom: 2.5px solid black;
+}
+
+.title h2, .teamInfo h2 {
+    margin-bottom: 2.5%;
+}
+
+.teamInfoTitle h2 {
+    padding-left: 2rem;
+}
+
+.globalStatsInfo {
+    display: flex;
+    gap: 1rem;
+}
+
+.readership, .digital, .social {
+    margin-right: auto;
+}
+
+.readership p:nth-child(2), .digital p:nth-child(2), .social p:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.teamMembers {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.editorContainer h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    margin: 2.5% 0% 2.5% 5%;
+}
+
+.editorContainer p {
+    font-family: 'EB Garamond', serif;
+    margin: 0% 0% 2.5% 5%;
+}
+
+.editorContainer img {
+    padding: 1vw 0.5vw 0vw;
+    height: 20vw;
+    width: 16vw;
+    object-fit: cover;
+}
+
+/* styling for smaller media and mobile devices */
+@media screen and (max-width: 768px) {
+    .aboutUsBanner {
+        height: 20rem;
+    }
+
+    .aboutUsBanner img {
+        height: 30rem;
+    }
+
+    .aboutUsBannerOverlay li {
+        line-height: 1.5rem;
+    }
+
+    .statsContent {
+        flex-direction: column;
+    }
+
+    .globalStats {
+        width: 100%;
+    }
+
+    .globalStatsInfo {
+        flex-wrap: wrap;
+    }
+
+    .teamInfoTitle h2 {
+        padding-left: 0%;
+    }
+
+    .teamInfo {
+        width: 100%;
+    }
+
+    /* grid is reorganised for smaller screens */
+    .teamMembers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 65vw 65vw;
+    }
+
+    #editor1 {
+        grid-column: 1 / 2;
+        grid-row:  1 / 2;
+        overflow: hidden;
+    }
+
+    #editor2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        overflow: hidden;
+    }
+
+    #editor3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        overflow: hidden;
+    }
+
+    #editor4 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        overflow: hidden;
+    }
+
+    .editorContainer img {
+        height: 80%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* grid is reorganised again for even smaller screens */
+    .teamMembers {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 130vw 130vw 130vw 130vw;
+    }
+
+    #editor1 {
+        grid-column: 1 / 2;
+        grid-row:  1 / 2;
+        overflow: hidden;
+    }
+
+    #editor2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        overflow: hidden;
+    }
+
+    #editor3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        overflow: hidden;
+    }
+
+    #editor4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        overflow: hidden;
+    }
+
+    .editorContainer img {
+        height: 80%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague</title>
+    <!-- <link rel="stylesheet" href="stylesheets/general.css">
+    <link rel="stylesheet" href="stylesheets/article3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <a id="homeAnchor" href="#"><h1>VAGUE</h1></a>
+    </header>
+    <!--Start of navbar-->
+    <section class ="navBar" id="navBar">
+        <div class="navBarContent">
+            <div class="mainNav">
+                <!--Navbar links-->
+                <ul>
+                    <li><a id="runwayAnchor" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="utilityNav">
+                <!--Hamburger and search feature-->
+                <ul>
+                    <li><a onclick="showSearchPage()"><i class="fa fa-search"></i></a></li>
+                    <li><a onclick="showHamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Search page overlay-->
+    <div id="searchPage" class="searchPage">
+        <div id="crossButton1" class="searchCross" onclick="closeSearchPage()"><i class="fa fa-times"></i></div>
+        <!--Search bar-->
+        <form id="searchForm" class="searchForm">
+            <button onclick="startSearch()" type="submit" class="submitButton"><i class="fa fa-search"></i></button>
+            <input id= "userInput" class="searchBar" type="Search" placeholder="Search">
+        </form>
+    </div>
+    <!--Hamburger menu overlay-->
+    <div id="hamburgerMenu" class="hamburgerMenu">
+        <div id="crossButton2" class="hamburgerCross" onclick="closeHamburgerMenu()"><i class="fa fa-times"></i></div>
+        <div class="hamburgerContent">
+            <ul class="hamburgerLinks">
+                <!--Hamburger menu links-->
+                <li><a id="runwayAnchor2" href="#">Runway</a></li>
+                <li><a id="metGalaAnchor2" href="#">Met Gala</a></li>
+                <li><a id="collectionAnchor2" href="#">Collections</a></li>
+                <li><a id="aboutAnchor2" href="#">About</a></li>
+            </ul>
+            <div class="hamburgerExtras">
+                <div class="hamburgerSocials">
+                    <!--Hamburger social links-->
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="hamburgerModes">
+                    <!--Night/Light mode options-->
+                    <p>MODE</p>
+                    <ul>
+                        <li id="lightModeBtn"><i class="fa-regular fa-sun"></i></li>
+                        <li id="nightModeBtn"><i class="fa-regular fa-moon"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Met gala article banner-->
+    <div class="bannerContainer">
+        <!--Banner grid layout-->
+        <div class="bannerContent">
+            <!--Images for grid-->
+            <div class="bannerGrid">
+                <img src="./Assets/MetGalaArticle/mg1.webp" alt="">
+                <img src="./Assets/MetGalaArticle/mg2.webp" alt="">  
+                <img src="./Assets/MetGalaArticle/mg3.webp" alt="">       
+                <img src="./Assets/MetGalaArticle/mg4.webp" alt="">  
+                <img src="./Assets/MetGalaArticle/mg5.webp" alt="">  
+                <img src="./Assets/MetGalaArticle/mg6.webp" alt="">  
+            </div>
+            <!--Banner overlay-->
+            <div class="bannerOverlay">
+                <!--Banner overlay content-->
+                <p>Met Gala 2021 Red Carpet</p>
+            </div>
+        </div>
+    </div>
+    <!--Start of article body-->
+    <div class="articleBody">
+        <!--Article content-->
+        <div class="articleContent">
+            <p>The Met Gala is typically held on the first Monday in May, but this year, the event was postponed due to COVID-19 and fell right in the middle of fashion month—meaning the stakes for stellar style on the red carpet were especially high. Last night, September 13th, fashion’s biggest night was held at its usual location: the Metropolitan Museum of Art in New York City. The gala was in celebration of the Costume Institute’s newest exhibition, “In America: A Lexicon of Fashion,” which opens to the public in the Anna Wintour Costume Center on September 18th.</p>
+            <p>On the red carpet, the celebrity guests embodied the theme of American style, from flashy, star-spangled ensembles, to more discreet nods to Americana motifs. The Met Gala’s red carpet has a history of creating memorable outfits—remember Rihanna’s high-fashion Margiela pope look from 2018?—and this year was no different.</p>
+            <p>As for who was on the guest list last night? Co-chairs this year included Billie Eilish, Timothée Chalamet, Naomi Osaka, and Amanda Gorman, but there were plenty of other Hollywood A-listers walking the famous Met steps. See stunning Met gala red carpet looks from Rihanna, Kendall Jenner, Gigi Hadid, Simone Biles and more of your favorites, exclusively on Vague.</p>
+            <p>Below, scroll through the gallery for every 2021 Met Gala red carpet look.</p>
+        </div>
+        <!--Sidebar recommendations-->
+        <div class="recommendations">
+            <h2>Vague Recommends</h2>
+            <!--Reccomended article 1-->
+            <article class="reco">
+                <!--Article content-->
+                <img src="./Assets/MetGala1.jpg" alt="">
+                <div class="recoContent">
+                    <p>FASHION</p>
+                    <header>
+                        <h4>Behind Megan Thee Stallion’s Stunning Old Hollywood Met Look</h4>
+                    </header>
+                    <p>BY LIANA SATENSTEIN</p>
+                </div>
+            </article>
+            <!--Reccomended article 2-->
+            <article class="reco">
+                <!--Article content-->
+                <img src="./Assets/MetGala2.jpg" alt="">
+                <div class="recoContent">
+                    <p>CELEBRITY STYLE</p>
+                    <header>
+                        <h4>Of Course Rihanna Shut Down the Red Carpet at the Met Gala</h4>
+                    </header>
+                    <p>BY JANELLE OKWODU</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!--Start of collection overview-->
+    <div class="collection">
+        <header>
+            <p>LOOKBOOK</p>
+        </header>
+        <!--Collection overview grid-->
+        <div class="collectionGrid">
+            <img src="./Assets/MetGalaArticle/mg1.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg2.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg3.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg4.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg5.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg6.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg7.webp" alt="">
+            <img src="./Assets/MetGalaArticle/mg8.webp" alt="">
+        </div>
+    </div>
+    <!--Start of footer-->
+    <footer>
+        <div class="footerContent">
+            <div class="footerSection1">
+                <!--Company description-->
+                <h2>VAGUE</h2>
+                <p>The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vague.com.</p>
+                <!--Footer social links-->
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerSection2">
+                <!--Footer navigation links-->
+                <h2>NAVIGATION</h2>
+                <ul>
+                    <li><a id="runwayAnchor3" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor3" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor3" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor3" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="footerSection3">
+                <!--Footer support links-->
+                <h2>SUPPORT</h2>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Website copyrights-->
+        <div class="footerEnding">
+            <p>&copy 2022 VAGUE</p>
+        </div>
+    </footer>
+    <script src="Scripts/exclusiveArticle2.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

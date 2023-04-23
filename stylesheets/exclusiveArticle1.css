@@ -1,0 +1,527 @@
+/* positioning and sizing of banner and image */
+.bannerContent {
+    position: relative;
+}
+
+.bannerContent img {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bannerOverlay {
+    position: absolute;
+    top: 40%;
+    margin-left: auto;
+    margin-left: auto;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* styling of overlay content */
+.bannerOverlay p:nth-child(1) {
+    color: rgba(247, 247, 247, 1);
+    font-size: 5rem;
+    font-family: var(--serifFont);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0%;
+}
+
+.bannerOverlay p:nth-child(2) {
+    color: rgba(247, 247, 247, 1);
+    font-size: 2rem;
+    font-family: var(--serifFont);
+    letter-spacing: 4px;
+    margin: 0%;
+}
+
+/* positioning and sizing of article intro */
+.articleIntro {
+    background-color: white;
+}
+
+.introContent {
+    padding-top: 2vw;
+    background-color: white;
+    display: flex;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.introFiller {
+    visibility: hidden;
+    position: relative;
+    width: 25%;
+}
+
+.introText {
+    width: 75%;
+}
+
+/* styling of article intro content */
+.introText h2 {
+    font-size: 2.5rem;
+    font-family: var(--serifFont);
+}
+
+.introText p {
+    font-size: 1.25rem;
+    font-family: var(--sansFont);
+    line-height: 1.75;
+    margin-bottom: 0%;
+    letter-spacing: .05rem;
+}
+
+/* positioning and sizing of article preview video */
+.articlePreviewContainer {
+    background-color: white;
+}
+
+.articlePreview {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.articlePreview iframe {
+    width: 100%;
+    height: 40vw;
+}
+
+/* positioning and sizing of article body */
+.articleBody {
+    display: flex;
+    background-color: white;
+}
+
+.articleContent {
+    max-width: 42.5rem;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* styling of article body content */
+.articleContent p {
+    font-size: 1.25rem;
+    font-family: var(--serifFont);
+    line-height: 1.75;
+}
+
+.authorInfo p:nth-child(1) {
+    font-size: 1.25rem;
+    font-family: var(--sansFont);
+    font-weight: bold;
+    margin-bottom: 0%;
+}
+
+.authorInfo p:nth-child(2) {
+    font-size: 1rem;
+    font-family: var(--sansFont);
+    margin-top: 0%;
+}
+
+/* positioning and sizing of sidebar recommendation section */
+.recommendations {
+    position: sticky;
+    align-self: flex-start;
+    top: 1rem;
+    min-width: 20rem;
+    max-width: 22.5rem;
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+/* styling of recommendation section content */
+.recommendations h2 {
+    font-family: var(--serifFont);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* styling for individual recommended article */
+.reco {
+    display: flex;
+    height: 12rem;
+    padding-bottom: .5rem;
+    padding-top:  .5rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.reco img {
+    height: 100%;
+}
+
+.recoContent {
+    margin-left: 1rem;
+}
+
+.recoContent header {
+    border-bottom: none;
+}
+
+.recoContent h4 {
+    font-weight: normal;
+    font-size: 1.25rem;
+    font-family: var(--serifFont);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-bottom: none;
+}
+
+.recoContent p {
+    font-size: .75rem;
+    font-family: var(--sansFont);
+    color: var(--secondayAccent);
+    letter-spacing: 2px;
+}
+
+.recoContent p:nth-child(1) {
+    margin-top: 0%;
+    margin-bottom: .25rem;
+}
+
+/* red filter effect over article image when hovered */
+.reco:hover > img {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    transition: filter .15s ease;
+}
+
+/* positioning and sizing of collection section */
+.collection {
+    background-color: white;
+}
+
+.collection p {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--serifFont);
+}
+
+.collectionCarouselContainer {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+/* image slider animation */
+.carouselImages {
+    display: flex;
+    animation: scrolling 45s linear infinite;
+}
+
+.carouselImages img {
+    width: 21.25rem;
+    object-fit: cover;
+    box-sizing: border-box;
+    border: .5rem solid white;
+}
+
+@keyframes scrolling {
+    0% {transform: translateX(0rem);}
+    100% {transform: translateX(-255rem);}
+}
+
+/* positioning and sizing of details section */
+.detailsContent {
+    padding-top: 2vw;
+    background-color: white;
+    display: flex;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.detailTitle {
+    width: 25%;
+}
+
+.detailDescription {
+    width: 75%;
+}
+
+/* styling of details content */
+.detailTitle h2 {
+    margin-top: 0%;
+    font-size: 2.5rem;
+    font-family: var(--serifFont);
+}
+
+.detailDescription p {
+    margin-top: .5%;
+    font-size: 1.25rem;
+    font-family: var(--sansFont);
+    line-height: 1.75;
+    margin-bottom: 0%;
+    letter-spacing: .05rem;
+}
+
+/* detail grid formatting */
+.detailGrid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 45vh 45vh 45vh 45vh;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+}
+
+.detailGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    opacity: 0;
+}
+
+.detail2 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    opacity: 0;
+}
+
+.detail3 {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    opacity: 0;
+}
+
+.detail4 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    opacity: 0;
+}
+
+.detail5 {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    opacity: 0;
+}
+
+.detail6 {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    opacity: 0;
+}
+
+.detail7 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    opacity: 0;
+}
+
+.detail8 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+    opacity: 0;
+}
+
+.detail9 {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+    opacity: 0;
+}
+
+.detail10 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    opacity: 0;
+}
+
+.detail11 {
+    grid-row: 4 / 5;
+    grid-column: 3 / 5;
+    opacity: 0;
+}
+
+/* animation for details fade in */
+@keyframes detailFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* positioning and sizing of stage section */
+.stageContent {
+    padding-top: 2vw;
+    background-color: white;
+    display: flex;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.stageTitle {
+    width: 25%;
+}
+
+.stageDescription {
+    width: 75%;
+}
+
+/* styling of stage title */
+.stageTitle h2 {
+    margin-top: 0%;
+    font-size: 2.5rem;
+    font-family: var(--serifFont);
+}
+
+.stageDescription p {
+    margin-top: .5%;
+    font-size: 1.25rem;
+    font-family: var(--sansFont);
+    line-height: 1.75;
+    margin-bottom: 0%;
+    letter-spacing: .05rem;
+}
+
+/* positioning and sizing of stage image slider */
+.sliderContainer {
+    padding-bottom: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sliderContent {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderImages img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: sliderFade .5s;
+}
+
+/* styling of stage image slider buttons */
+#rightBtn {
+    position: absolute;
+    right: 0%;
+    background-color: transparent;
+    color: rgba(247, 247, 247, .5);
+    font-size: 3rem;
+    padding-right: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#leftBtn {
+    position: absolute;
+    left: 0%;
+    background-color: transparent;
+    color: rgba(247, 247, 247, .5);
+    font-size: 3rem;
+    padding-left: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* animation for stage image slider fade in */
+@keyframes sliderFade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+/* Formatting for smaller screens and mobile devices */
+@media screen and (max-width: 768px) {
+
+    .bannerContent {
+        height: 20rem;
+    }
+
+    .bannerContent img {
+        height: 30rem;
+    }
+
+    .bannerOverlay {
+        transform: translateY(-25%);
+    }
+
+    .bannerOverlay p:nth-child(1) {
+        font-size: calc(.5rem + 8vw);
+    }
+
+    .bannerOverlay p:nth-child(2) {
+        font-size: calc(.5rem + 2vw);
+    }
+
+    .introFiller {
+        width: 0%;
+    }
+
+    .introText {
+        width: 100%;
+    }
+
+    .recommendations {
+        display: none;
+    }
+
+    .collection p {
+        font-size: calc(2rem + 4vw);
+    }
+
+    .detailsContent {
+        flex-direction: column;
+    }
+
+    .detailDescription {
+        width: 100%;
+    }
+
+    .detailGrid {
+        grid-template-rows: 45vw 45vw 45vw 45vw;
+    }
+
+    .stageContent {
+        flex-direction: column;
+    }
+
+    .stageDescription {
+        width: 100%;
+    }
+}

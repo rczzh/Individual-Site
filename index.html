@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague</title>
+    <link rel="stylesheet" href="stylesheets/general.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <a id="homeAnchor" href="#"><h1>VAGUE</h1></a>
+    </header>
+    <!--Start of navbar-->
+    <nav class ="navBar" id="navBar">
+        <div class="navBarContent">
+            <div class="mainNav">
+                <!--Navbar links-->
+                <ul>
+                    <li><a id="runwayAnchor" href="#runwaySection">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor" href="#metGalaSection">MET GALA</a></li>
+                    <li><a id="collectionAnchor" href="#collectionSection">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="utilityNav">
+                <!--Hamburger and search feature-->
+                <ul>
+                    <li><a onclick="showSearchPage()"><i class="fa fa-search"></i></a></li>
+                    <li><a onclick="showHamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Search page overlay-->
+    <div id="searchPage" class="searchPage">
+        <div id="crossButton1" class="searchCross" onclick="closeSearchPage()"><i class="fa fa-times"></i></div>
+        <!--Search bar-->
+        <form id="searchForm" class="searchForm">
+            <button type="submit" class="submitButton"><i class="fa fa-search"></i></button>
+            <input id= "userInput" class="searchBar" type="Search" placeholder="Search">
+        </form>
+    </div>
+    <!--Hamburger menu overlay-->
+    <div id="hamburgerMenu" class="hamburgerMenu">
+        <div id="crossButton2" class="hamburgerCross" onclick="closeHamburgerMenu()"><i class="fa fa-times"></i></div>
+        <div class="hamburgerContent">
+            <ul class="hamburgerLinks">
+                <!--Hamburger menu links-->
+                <li><a id="runwayAnchor" href="#runwaySection">Runway</a></li>
+                <li><a id="metGalaAnchor" href="#metGalaSection">Met Gala</a></li>
+                <li><a id="collectionAnchor" href="#collectionSection">Collections</a></li>
+                <li><a id="aboutAnchor2" href="#">About</a></li>
+            </ul>
+            <div class="hamburgerExtras">
+                <div class="hamburgerSocials">
+                    <!--Hamburger social links-->
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="hamburgerModes">
+                    <!--Night/Light mode options-->
+                    <p>MODE</p>
+                    <ul>
+                        <li id="lightModeBtn"><i class="fa-regular fa-sun"></i></li>
+                        <li id="nightModeBtn"><i class="fa-regular fa-moon"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Start of landing page-->
+    <section class="sliderContainer">
+        <!--Image slider-->
+        <div id="sliderImages" class="sliderImages">
+            <img class="sliderImage" src="./Assets/landingbanner1.webp" alt="Louis Vuitton fall/winter 2022 menswear collection">
+            <img class="sliderImage" src="./Assets/landingbanner2.webp" alt="Dior fall/winder 2022 menswear collection">
+            <img class="sliderImage" src="./Assets/landingbanner3.webp" alt="Met Gala 2021 Red Carpet">
+        </div>
+        <div class="filter"></div>
+        
+        <div class="overlayContainer">
+            <!--Image slider buttons-->
+            <button id="leftBtn" onclick="slide(-1)"><i class="fa fa-chevron-left"></i></button>
+            <button id="rightBtn" onclick="slide(1)"><i class="fa fa-chevron-right"></i></button>
+            <!--Image slider links-->
+            <div id="overlayText" class="overlayText">
+                <a id="exArticle1Link" href="#">
+                    <p>12 best looks from the Louis Vuitton fall/winter 2022 menswear collection</p>
+                </a>
+                <a href="#" onclick="postIndex(1)">
+                    <p>8 best looks from the Dior fall/winter 2022 menswear collection</p>
+                </a>
+                <a id="exArticle2Link" href="#">
+                    <p>Met Gala 2021 Red Carpet</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--Start of runway section-->
+    <section class="headlineBackground">
+        <!--runway category tag-->
+        <div id="headlineTitle" class="headlineTitle">
+            <a>RUNWAY</a>
+        </div>
+        <!--span to direct navbar-->
+        <span id="runwaySection"></span>
+        <!--runway preview screen-->
+        <div id="runwayContainer" class="headlineContainer">
+            <!--Runway article 1-->
+            <div class="rw1">
+                <div id="rw1Content" class="rw1Content">
+                    <!--static image and preview video-->
+                    <img src="./Assets/SchiaparelliCover.jpg" alt="Schiaparelli Spring 2022 Couture">
+                    <video src="./Assets/SchiaparelliSpring2022Couture.mp4"></video>
+                    <p>Schiaparelli</p>
+                    <a id="articleLink" onclick="postIndex(0)">VIEW ARTICLE</a>
+                </div>
+                <!--Preview cross button-->
+                <button id="runwayCross" class="runwayCross">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <!--Runway article 2-->
+            <div class="rw2">
+                <div id="rw2Content" class="rw2Content">
+                    <!--static image and preview video-->
+                    <img src="./Assets/ValentinoCover.jpg" alt="Valentino Spring 2022 Couture">
+                    <video src="./Assets/ValentinoSpring2022Couture.mp4"></video>
+                    <p>Valentino</p>
+                    <a id="articleLink" href="">VIEW ARTICLE</a>
+                </div>
+                <!--Preview cross button-->
+                <button id="runwayCross" class="runwayCross">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <!--Runway article 3-->
+            <div class="rw3">
+                <div id="rw3Content" class="rw3Content">
+                    <!--static image and preview video-->
+                    <img src="./Assets/JeanPaulGaultierCover.jpg" alt="Jean Paul Gaultier 2022 Couture">
+                    <video src="./Assets/JPGSpring2022Couture.mp4"></video>
+                    <p>Jean Paul Gaultier</p>
+                    <a id="articleLink" href="">VIEW ARTICLE</a>
+                </div>
+                <!--Preview cross button-->
+                <button id="runwayCross" class="runwayCross">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <!--Runway article 4-->
+            <div class="rw4">
+                <div id="rw4Content" class="rw4Content">
+                    <!--static image and preview video-->
+                    <img src="./Assets/FendiCover.jpg" alt="Fendi Spring 2022 Couture">
+                    <video src="./Assets/FendiSpring2022Couture.mp4"></video>
+                    <p>Fendi</p>
+                    <a id="articleLink" href="">VIEW ARTICLE</a>
+                </div>
+                <!--Preview cross button-->
+                <button id="runwayCross" class="runwayCross">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--Start of met gala section-->
+    <div class="articleBanner">
+        <!--Met gala banner-->
+        <img src="./Assets/MetGalaBanner.jpg" alt="Celebrity collage at the Met Gala">
+        <div class="filter2"></div>
+        <div class="articleOverlay">
+            <!--Met gala banner overlay-->
+            <div id="articleOverlayContainer" class="articleOverlayContainer">
+                <!--Overlay content-->
+                <div class="articleOverlayTitle">
+                    <p>MET</p>
+                    <p>GALA</p>
+                    <p>Affectionately referred to as “fashion’s biggest night out,” the Met Gala 2021 is a fundraising benefit for the Metropolitan Museum of Art in New York City.</p>
+                </div>
+                <div class="articleOverlayDescription">
+                    <p>The event welcomes stars, young creatives, and industry paragons. The Costume Institute will host its first two-part exhibition, on the theme of American fashion, during 2021 and 2022.</p>
+                    <p>Part one, “In America: A Lexicon of Fashion,” will open in the Anna Wintour Costume Center on September 18, 2021, and will remain on display when “In America: An Anthology of Fashion,” opens on May 5, 2022 in the period rooms of the American Wing.</p>
+                    <p>Both shows will run through September 5, 2022. Bookmark this page for news about the exhibitions and benefit gala and to enjoy Vogue’s coverage of past events’ biggest moments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Start of meta gala article grid-->
+    <section class="articleBackground">
+        <!--span to direct navbar-->
+        <span id="metGalaSection"></span>
+        <div id="articleContainer" class="articleContainer">
+            <!--Met gala article 1-->
+            <div class="article1">
+                <img src="./Assets/MetGala1.jpg" alt="Megan Thee Stallion getting ready for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>FASHION</p>
+                    <p>Behind Megan Thee Stallion’s Stunning Old Hollywood Met Look</p>
+                    <p>BY LIANA SATENSTEIN</p>
+                </div>
+            </div>
+            <!--Met gala article 2-->
+            <div class="article2">
+                <img src="./Assets/MetGala2.jpg" alt="Rihanna in Balenciaga for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>CELEBRITY STYLE</p>
+                    <p>Of Course Rihanna Shut Down the Red Carpet at the Met Gala </p>
+                    <p>BY JANELLE OKWODU</p>
+                </div>
+            </div>
+            <!--Met gala article 3-->
+            <div class="article3">
+                <img src="./Assets/MetGala3.jpg" alt="Billie Eilish in Oscar de la Renta for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>CELEBRITY STYLE</p>
+                    <p>Billie Eilish’s Oscar De La Renta Met Gala Gown Is An Ode To Marilyn Monroe</p>
+                    <p>BY KERRY MCDERMOTT</p>
+                </div>
+            </div>
+            <!--Met gala article 4-->
+            <div class="article4">
+                <img src="./Assets/MetGala4.jpg" alt="Kendall Jenner getting ready for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>CELEBRITY STYLE</p>
+                    <p>Watch Kendall Jenner Get Ready for the Met Gala</p>
+                    <p>BY CHRISTIAN ALLAIRE</p>
+                </div>
+            </div>
+            <!--Met gala article 5-->
+            <div class="article5">
+                <img src="./Assets/MetGala5.jpg" alt="Gigi Hadid in Versace for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>BEAUTY</p>
+                    <p>Gigi Hadid Brings a Bombshell Redhead Beauty Transformation to the 2021 Met Gala </p>
+                    <p>BY LAUREN VALENTI</p>
+                </div>
+            </div>
+            <!--Met gala article 6-->
+            <div class="article6">
+                <img src="./Assets/MetGala6.jpg" alt="Timothée Chalamet in Haider Ackermann for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>CELEBRITY STYLE</p>
+                    <p>Timothée Chalamet Walked 10 Blocks to the 2021 Met Gala—and Showed Up in Sweats</p>
+                    <p>BY CHRISTIAN ALLAIRE</p>
+                </div>
+            </div>
+            <!--Met gala article 7-->
+            <div class="article7">
+                <img src="./Assets/MetGala7.jpg" alt="Cara Delevingue in Christian Dior for the Met Gala">
+                <!--article content-->
+                <div class="articleContent">
+                    <p>CELEBRITY STYLE</p>
+                    <p>Cara Delevingne Almost “Burst Into Tears” When She Saw Her Met Gala Look</p>
+                    <p>BY JANELLE OKWODU</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Start of past collections section-->
+    <section class="pastCollectionsBackground">
+        <!--Past collection category tag-->
+        <div id = pastCollectionTitle>
+            <a>COLLECTIONS</a>
+        </div>
+        <!--span to direct navbar-->
+        <span id="collectionSection"></span>
+        <div id="gridElements" class="pastCollectionContainer">
+            <!--Collection article 1-->
+            <a class="collection1" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection1.jpg" alt="Versace Spring 2016">
+                <div class="collectionContent">
+                    <p>VERSACE</p>
+                    <p>SPRING 2016</p>
+                </div>
+            </a>
+            <!--Collection article 2-->
+            <a class="collection2" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection2.jpg" alt="Alexander McQueen Spring 2010">
+                <div class="collectionContent">
+                    <p>ALEXANDER MCQUEEN</p>
+                    <p>SPRING 2010</p>
+                </div>
+            </a>
+            <!--Collection article 3-->
+            <a class="collection3" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection3.jpg" alt="Alexander McQueen Winter 2009">
+                <div class="collectionContent">
+                    <p>ALEXANDER MCQUEEN</p>
+                    <p>WINTER 2009</p>
+                </div>
+            </a>
+            <!--Collection article 4-->
+            <a class="collection4" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection4.jpg" alt="Maison Margie Spring 2020">
+                <div class="collectionContent">
+                    <p>MAISON MARGIELA</p>
+                    <p>SPRING 2020</p>
+                </div>
+            </a>
+            <!--Collection article 5-->
+            <a class="collection5" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection5.jpg" alt="Gucci Spring 2019">
+                <div class="collectionContent">
+                    <p>GUCCI</p>
+                    <p>SPRING 2019</p>
+                </div>
+            </a>
+            <!--Collection article 6-->
+            <a class="collection6" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection6.jpg" alt="Moschino Spring 2017">
+                <div class="collectionContent">
+                    <p>MOSCHINO</p>
+                    <p>SPRING 2017</p>
+                </div>
+            </a>
+            <!--Collection article 7-->
+            <a class="collection7" href="#" onclick="postIndex(2)">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection7.webp" alt="Burberry Spring 2021">
+                <div class="collectionContent">
+                    <p>BURBERRY</p>
+                    <p>SPRING 2021</p>
+                </div>
+            </a>
+            <!--Collection article 8-->
+            <a class="collection8" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection8.jpg" alt="Chanel Spring 2018">
+                <div class="collectionContent">
+                    <p>CHANEL</p>
+                    <p>SPRING 2018</p>
+                </div>
+            </a>
+            <!--Collection article 9-->
+            <a class="collection9" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection9.jpg" alt="Gucci Spring 2020">
+                <div class="collectionContent">
+                    <p>GUCCI</p>
+                    <p>SPRING 2020</p>
+                </div>
+            </a>
+            <!--Collection article 10-->
+            <a class="collection10" href="">
+                <img src="./Assets/pastCollections/PastCollection10.jpg" alt="Dior Winter 2020">
+                <div class="collectionContent">
+                    <p>DIOR</p>
+                    <p>WINTER 2020</p>
+                </div>
+            </a>
+            <!--Collection article 11-->
+            <a class="collection11" href="">
+                <!--article content-->
+                <img src="./Assets/pastCollections/PastCollection11.jpg" alt="Chanel Spring 2016">
+                <div class="collectionContent">
+                    <p>CHANEL</p>
+                    <p>SPRING 2016</p>
+                </div>
+            </a>
+            <!--Collection overlay-->
+            <div class="collectionOverlay">
+                <!--Collection overlay controls-->
+                <div id="view" class="view">
+                    <p>Past Collections</p>
+                    <p id="viewBtn">View Collection</p>
+                </div>
+                <div id="normal" class="normal">
+                    <a id="normalBtn"><i class="fa fa-times-circle"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Start of footer-->
+    <footer>
+        <div class="footerContent">
+            <div class="footerSection1">
+                <!--Company description-->
+                <h2>VAGUE</h2>
+                <p>The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vague.com.</p>
+                <!--Footer social links-->
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerSection2">
+                <!--Footer navigation links-->
+                <h2>NAVIGATION</h2>
+                <ul>
+                    <li><a id="runwayAnchor3" href="#runwaySection">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor3" href="#metGalaSection">MET GALA</a></li>
+                    <li><a id="collectionAnchor3" href="#collectionSection">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor3" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="footerSection3">
+                <!--Footer support links-->
+                <h2>SUPPORT</h2>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Website copyrights-->
+        <div class="footerEnding">
+            <p>&copy 2022 VAGUE</p>
+        </div>  
+    </footer>
+    <script src="Scripts/script.js"></script>
+    <script src="Scripts/indexScript.js"></script>
+</body>
+</html>

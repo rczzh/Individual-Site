@@ -1,0 +1,395 @@
+/* pre-determined colours and fonts*/
+:root {
+    --theme: #EE0000;
+    --accentTheme: #DAA520;
+    --secondaryAccent: #6c6e70;
+
+    --NightmodeBG: #171717;
+    --NightmodeColor:#EDEDED;
+    --NightmodeSecondaryColor: #444;
+
+    --serifFont: 'EB Garamond', serif;
+    --sansFont: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0%;
+}
+
+/* styling for highlighted contents */
+::selection {
+    color: rgba(247, 247, 247, 1);
+    background-color: var(--theme);
+}
+
+/* styling of header */
+header {
+    background-color: black;
+    border-bottom: 1px solid var(--NightmodeSecondaryColor);
+}
+
+header a {
+    line-height: 1;
+    color: var(--NightmodeColor);
+    text-decoration: none;
+}
+
+header h1 {
+    max-width: 85rem;
+    margin: 0% auto 0% auto;
+    padding-top: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 7.5rem;
+}
+
+/* position and sizing of nav bar */
+.navBar {
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    z-index: 10;
+    height: 51px;
+}
+
+.navBar ul {
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+}
+
+/* styling of nav bar content */
+.navBar li {
+    list-style: none;
+}
+
+.navBar a {
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--NightmodeColor);
+}
+
+.navBarContent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* nav bar highlights red when hovered over */
+.mainNav a:hover {
+    color: var(--theme);
+}
+
+.utilityNav {
+    height: 51px;
+    display: flex;
+    align-items: center;
+}
+
+.utilityNav ul {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* positiong and sizing of search page and hamburger menu overlays */
+.searchPage, .hamburgerMenu {
+    position: fixed;
+    top: 0%;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    color: rgba(247, 247, 247, 1);
+    visibility: hidden;
+}
+
+/* positioning and sizing of search page and hamburger menu cross */
+.searchCross, .hamburgerCross {
+    position: absolute;
+    margin-right: 15%;
+    margin-top: 0.39%;
+    right: 0%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* positioning and sizing of search form */
+.searchForm {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    left: 0%;
+    right: 0%;
+    top: 45%;
+    visibility: hidden;
+}
+
+#cross {
+    visibility: hidden;
+}
+
+.searchBar, .submitButton {
+    border: none;
+    border-bottom: 1px solid white;
+    color: rgb(247, 247, 247);
+    background-color: transparent;
+    font-size: 4rem;
+}
+
+.searchBar {
+    width: 100%;
+}
+
+.submitButton {
+    padding: 1px
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+/* positioning and sizing of hamburger menu content */
+.hamburgerContent {
+    position: absolute;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 17.5%;
+    left: 0;
+    right: 0;
+}
+
+.hamburgerExtras {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburgerMenu ul {
+    padding-left: 0%;
+}
+
+.hamburgerLinks li {
+    margin-top: 1vw;
+    opacity: 0;
+    list-style: none;
+}
+
+/* styling of hamburger menu links */
+.hamburgerLinks a {
+    text-decoration: none;
+    color: rgba(247, 247, 247, 1);
+    font-family: 'EB Garamond', serif;
+    font-size: 4rem;
+}
+
+.hamburgerSocials li {
+    list-style: none;
+    padding-right: 2rem;
+}
+
+/* styling of hamburger menu social media icons */
+.hamburgerSocials a {
+    text-decoration: none;
+    color: rgba(247, 247, 247, 1);
+    font-size: 2rem;
+}
+
+.hamburgerSocials ul {
+    display: flex;
+}
+
+.hamburgerModes ul {
+    display: flex;
+}
+
+.hamburgerModes li {
+    list-style: none;
+    padding-right: 2rem;
+    font-size: 2rem;
+}
+
+/* animations for hamburger menu links */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* animations for navbar */
+@keyframes hideNavBar {
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes showNavBar {
+    from{
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* reference anchor points used to direct user to specific section of the mainpage */
+#runwaySection {
+    position: relative;
+    top: -7vh;
+}
+
+#metGalaSection {
+    position: relative;
+    top: -7vh;
+}
+
+#collectionSection {
+    position: relative;
+    top: -7.5vh;
+}
+
+/* decorative line for cateogry tags */
+.breakline {
+    width: 2.5rem;
+    height: 0.25rem;
+    background-color: var(--accentTheme);
+}
+
+/* positioning and sizing of footer section */
+footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2.5rem;
+    background-color: black;
+}
+
+
+/* styling of footer content */
+.footerContent {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: rgba(247, 247, 247, 1);
+    font-family: var(--sansFont);
+    justify-content: center;
+    border-bottom: 1px solid rgba(247, 247, 247, 1);
+}
+
+.footerContent li {
+    list-style: none;
+}
+
+.footerContent ul {
+    padding-left: 0%;
+}
+
+.footerSection1 {
+    width: 50%;
+}
+
+.footerSection1 p {
+    margin-bottom: 2.5rem;
+}
+
+.footerSocials ul {
+    display: flex;
+}
+
+.footerSocials li {
+    font-size: 2rem;
+    margin-right: 3rem;
+}
+
+.footerSection2 {
+    margin-left: 5vw;
+    width: 25%;
+}
+
+.footerSection2 li, .footerSection3 li {
+    line-height: 2;
+    letter-spacing: 1.5px;
+    font-size: .75rem;
+}
+
+.footerSection2 a, .footerSocials a {
+    color: rgba(247, 247, 247, 1);
+    text-decoration: none;
+}
+
+.footerSection3 {
+    margin-left: 5vw;
+    width: 25%;
+}
+
+.footerSection3 a {
+    color: rgba(247, 247, 247, 1);
+    text-decoration: none;
+}
+
+.footerEnding {
+    text-align: center;
+    color: rgba(247, 247, 247, .5);
+}
+
+/* Formatting for smaller screens and mobile devices */
+@media screen and (max-width: 768px) {
+    header h1 {
+        text-align: center;
+        font-size: calc(50px + 7vw);
+    }
+
+    .mainNav ul {
+        display: none;
+    }
+
+    .footerContent {
+        flex-direction: column;
+    }
+
+    .footerSocials ul {
+        justify-content: space-around;
+    }
+
+    .footerSocials li {
+        margin-right: 0%;
+    }
+
+    .footerSection1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerSection2 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+    }
+
+    .footerSection3 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+    }
+
+}

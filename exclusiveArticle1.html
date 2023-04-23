@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague</title>
+    <!-- <link rel="stylesheet" href="stylesheets/general.css">
+    <link rel="stylesheet" href="stylesheets/article3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <a id="homeAnchor" href="#"><h1>VAGUE</h1></a>
+    </header>
+    <!--Start of navbar-->
+    <section class ="navBar" id="navBar">
+        <div class="navBarContent">
+            <div class="mainNav">
+                <!--Navbar links-->
+                <ul>
+                    <li><a id="runwayAnchor" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="utilityNav">
+                <!--Hamburger and search feature-->
+                <ul>
+                    <li><a onclick="showSearchPage()"><i class="fa fa-search"></i></a></li>
+                    <li><a onclick="showHamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Search page overlay-->
+    <div id="searchPage" class="searchPage">
+        <div id="crossButton1" class="searchCross" onclick="closeSearchPage()"><i class="fa fa-times"></i></div>
+        <!--Search bar-->
+        <form id="searchForm" class="searchForm">
+            <button onclick="startSearch()" type="submit" class="submitButton"><i class="fa fa-search"></i></button>
+            <input id= "userInput" class="searchBar" type="Search" placeholder="Search">
+        </form>
+    </div>
+    <!--Hamburger menu overlay-->
+    <div id="hamburgerMenu" class="hamburgerMenu">
+        <div id="crossButton2" class="hamburgerCross" onclick="closeHamburgerMenu()"><i class="fa fa-times"></i></div>
+        <div class="hamburgerContent">
+            <ul class="hamburgerLinks">
+                <!--Hamburger menu links-->
+                <li><a id="runwayAnchor2" href="#">Runway</a></li>
+                <li><a id="metGalaAnchor2" href="#">Met Gala</a></li>
+                <li><a id="collectionAnchor2" href="#">Collections</a></li>
+                <li><a id="aboutAnchor2" href="#">About</a></li>
+            </ul>
+            <div class="hamburgerExtras">
+                <div class="hamburgerSocials">
+                    <!--Hamburger social links-->
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="hamburgerModes">
+                    <!--Night/Light mode options-->
+                    <p>MODE</p>
+                    <ul>
+                        <li id="lightModeBtn"><i class="fa-regular fa-sun"></i></li>
+                        <li id="nightModeBtn"><i class="fa-regular fa-moon"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Article banner-->
+    <div class="bannerContainer">
+        <div class="bannerContent">
+            <img src="./Assets/LVArticle/LVMainBanner.jpeg" alt="Louis Vuitton Winter 2022 menswear">
+            <!--Article banner overlay-->
+            <div class="bannerOverlay">
+                <p>LOUIS VUITTON</p>
+                <p>WINTER 2022 MENSWEAR</p>
+            </div>
+        </div>
+    </div>
+    <!--Article title container-->
+    <div class="articleIntro">
+        <div class="introContent">
+            <div class="introFiller">
+            </div>
+            <!--Article title content-->
+            <div class="introText">
+                <h2>MEN'S FALL-WINTER 2022 SHOW</h2>
+                <p>The 𝓛𝓸𝓾𝓲𝓼 Dreamhouse™️ presents the Men’s Fall-Winter 2022 Collection, consolidating the themes and messages of the eight-season arc Virgil Abloh created for Louis Vuitton.</p>
+            </div> 
+        </div>
+    </div>
+    <!--Article preview video-->
+    <div class="articlePreviewContainer">
+        <div class="articlePreview">
+            <iframe src="https://www.youtube.com/embed/1lztJ_1rY6M?autoplay=1&mute=1" frameborder="0"></iframe>
+        </div>
+    </div>
+    <!--Article body-->
+    <div class="articleBody">
+        <div class="articleContent">
+            <!--Author information-->
+            <div class="authorInfo">
+                <p>BY LUKE LEITCH</p>
+                <p>22 JANUARY 2022</p>
+            </div>
+            <!--Article content-->
+            <p>During his eight collection residency, Virgil Abloh turned the house of Louis Vuitton upside down and inside out. He made the exclusive inclusive. This afternoon in Paris apparently marked the final collection of that arc, and in the set at least it appeared to come full circle. The collection was named Louis Dreamhouse, and around the runway were scattered the upended elements of a house that had been hit by some enormous force of energy now spent.</p>
+            <p>In one corner was a staircase (nodding to The Truman Show set of season 4), from which some opening dancers, after some apparent security issue had been resolved, bounced up and down on hidden trampolines. An empty bed rested alongside the roof and chimney, from which a homey puff of steam emerged. On the other side of the roof was a long dining table, down which sat the Chineke! Orchestra musicians whose performance of a Tyler, the Creator-composed piece contributed swooningly to making the show so moving. On the wall above them a stopped clock read the time as eight, on the dot.</p>
+            <p>The collection unfolded on 20 dancers and 67 models. Abloh’s great gift as both designer and lightning rod—masterfully to navigate an elusive commonality of commodity and community in order to service the former and uplift the latter—was posthumously still very much alive, even when referencing death. The inclusion of a Jim Phillips-esque Grim Reaper graphic was a breathtaking detail from a man designing his own legacy while gazing upon his own mortality. Bags came shaped as bouquets. The closing four all-white looks, some featuring Leonardo-esque wings, required no interpretation.</p>
+            <p>To focus overly on the merch at a show attended by his widow and so many friends that it acted also as a form of memorial feels almost grubby. However Abloh did articulate himself very specifically through design, and here his instinct to cross-pollinate categories in order to erase boundaries was in full force: lushly magisterial suiting, both quirkily detailed and jewel-accessorised, played alongside the “streetwear” tradition this designer refused to tolerate being marginalised.</p>
+            <p>Then there were the two tapestried looks, one on a topcoat, the other on an acutely waisted—almost Bar-shaped—parka, upon which were reproduced De Chirico’s The Melancholia of Departure, a piece the artist created multiple versions of. These, said the notes, were illustrative of the 2020 Abloh-termed concept named “Maintainamorphosis,” defined as “the principle that ‘old’ ideas should be invigorated with value and presented alongside the ‘new,’ because both are equal in worth.”</p>
+            <p>Returning then to the “old,” it was back in June 2018 for collection 1, his very first for Louis Vuitton, that Abloh transmitted multiple references to The Wizard Of Oz, all of them specific to Dorothy’s fever dream. Today, as members of Abloh’s design studio came out en masse to a standing ovation after his very last collection for Louis Vuitton, they stood within the inside-out of Abloh’s cyclone-scattered dreamhouse. What an irreplaceable force he was.</p>
+        </div>
+        <!--Sidebar recommendations-->
+        <div class="recommendations">
+            <h2>Vague Recommends</h2>
+            <!--Recommended article 1-->
+            <article class="reco">
+                <img src="./Assets/MetGala1.jpg" alt="Megan Thee Stallion getting ready for the Met Gala">
+                <div class="recoContent">
+                    <p>FASHION</p>
+                    <header>
+                        <h4>Behind Megan Thee Stallion’s Stunning Old Hollywood Met Look</h4>
+                    </header>
+                    <p>BY LIANA SATENSTEIN</p>
+                </div>
+            </article>
+            <!--Recommended article 2-->
+            <article class="reco">
+                <img src="./Assets/MetGala2.jpg" alt="Rihanna in Balenciaga for the Met Gala">
+                <div class="recoContent">
+                    <p>CELEBRITY STYLE</p>
+                    <header>
+                        <h4>Of Course Rihanna Shut Down the Red Carpet at the Met Gala</h4>
+                    </header>
+                    <p>BY JANELLE OKWODU</p>
+                </div>
+            </article>
+            <!--Recommended article 3-->
+            <article class="reco">
+                <img src="./Assets/MetGala4.jpg" alt="Kendall Jenner getting ready for the Met Gala">
+                <div class="recoContent">
+                    <p>CELEBRITY STYLE</p>
+                    <header>
+                        <h4>Watch Kendall Jenner Get Ready for the Met Gala</h4>
+                    </header>
+                    <p>BY CHRISTIAN ALLAIRE</p>
+                </div>
+            </article>
+            <!--Recommended article 4-->
+            <article class="reco">
+                <img src="./Assets/MetGala5.jpg" alt="Gigi Hadid in Versace for the Met Gala">
+                <div class="recoContent">
+                    <p>BEAUTY</p>
+                    <header>
+                        <h4>Gigi Hadid Brings a Bombshell Redhead Beauty Transformation to the 2021 Met Gala</h4>
+                    </header>
+                    <p>BY LAUREN VALENTI</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!--Start of collection section-->
+    <div class="collection">
+        <div class="collectionTitle">
+            <p>COLLECTION</p>
+        </div> 
+        <!--Collection overview slider-->
+        <div class="collectionCarouselContainer">
+            <div class="carouselImages">
+                <!--Main images-->
+                <img src="./Assets/LVArticle/LV1.jpg" alt="Model in black trenchcoat carrying a bouquet of flowers">
+                <img src="./Assets/LVArticle/LV2.jpg" alt="Model in white blazer and dark green Louis Vuitton monogram trousers">
+                <img src="./Assets/LVArticle/LV3.jpg" alt="Model in white and black coat with alien motif, carrying a checkered pink bag">
+                <img src="./Assets/LVArticle/LV4.jpg" alt="Model in black suit with white netting">
+                <img src="./Assets/LVArticle/LV5.jpg" alt="Model in white and black coat with wizard motif, carrying a padded black bag">
+                <img src="./Assets/LVArticle/LV6.jpg" alt="Model in oversized brown suit, carrying a brown Louis Vuitton monogram bag">
+                <img src="./Assets/LVArticle/LV7.jpg" alt="Model in purple Louis Vuitton monogram puffer jacket and dark green Louis Vuitton monogram trousers">
+                <img src="./Assets/LVArticle/LV8.jpg" alt="Model in tracksuit with Louis Vuitton motifs, carrying a purple paint can">
+                <img src="./Assets/LVArticle/LV9.jpg" alt="Model in forest motif embroidered suit">
+                <img src="./Assets/LVArticle/LV10.jpg" alt="Model in forest motif embroidered jacket and trousers">
+                <img src="./Assets/LVArticle/LV11.jpg" alt="Model in windbreaker and baggy trousers with Louis Vuitton motifs">
+                <img src="./Assets/LVArticle/LV12.jpg" alt="Model in turquoise baggy jacket, carrying a red and black checkered bag">
+
+                <!--Image clones to ensure continuous sliding-->
+                <img src="./Assets/LVArticle/LV1.jpg" alt="Model in black trenchcoat carrying a bouquet of flowers">
+                <img src="./Assets/LVArticle/LV2.jpg" alt="Model in white blazer and dark green Louis Vuitton monogram trousers">
+                <img src="./Assets/LVArticle/LV3.jpg" alt="Model in white and black coat with alien motif, carrying a checkered pink bag">
+                <img src="./Assets/LVArticle/LV4.jpg" alt="Model in black suit with white netting">
+            </div>
+        </div>
+    </div>
+    <!--Start of details section-->
+    <div class="detailsContainer">
+        <div class="detailsContent">
+            <!--Details title content-->
+            <div class="detailTitle">
+                <h2>DETAILS</h2>            
+            </div>
+            <div class="detailDescription">
+                <p>Through the lens of Virgil Abloh’s central Boyhood Ideology®, seeing the world with the eyes of a child, the collection transmutes the dress codes popularly tied to societal archetypes and patchworks them in new ways. Through materials and techniques, gestures of surrealism take form, abstracting the familiar and expanding our horizons.</p>
+            </div>
+        </div>
+    </div>
+    <!--Detail grid-->
+    <div class="detailGridContainer">
+        <div class="detailGrid">
+            <div class="detail1">
+                <img src="./Assets/LVArticle/detail1.jpg" alt="close up of model in purple puffer jacket with Louis Vuitton monogram">
+            </div>
+            <div class="detail2">
+                <img src="./Assets/LVArticle/detail2.webp" alt="close up of model in white suit">
+            </div>
+            <div class="detail3">
+                <img src="./Assets/LVArticle/detail3.webp" alt="close up of model in white puffer jacket and skirt with wings made from lace">
+            </div>
+            <div class="detail4">
+                <img src="./Assets/LVArticle/detail4.jpg" alt="close up of model in turquoise suit, carrying a bouquet of flowers">
+            </div>
+            <div class="detail5">
+                <img src="./Assets/LVArticle/detail5.webp" alt="close up of model in white and purple blazer with flower embroidery and Louis Vuitton motif">
+            </div>
+            <div class="detail6">
+                <img src="./Assets/LVArticle/detail6.webp" alt="close up of model in white and black coat with wizard motif, carrying a padded black bag">
+            </div>
+            <div class="detail7">
+                <img src="./Assets/LVArticle/detail7.jpg" alt="close up of white layered chiffon dress">
+            </div>
+            <div class="detail8">
+                <img src="./Assets/LVArticle/detail8.jpg" alt="close up of model in dark green jacket with Louis Vuitton chromatic Cuban links">
+            </div>
+            <div class="detail9">
+                <img src="./Assets/LVArticle/detail9.webp" alt="close up of flower embroidered suit with Louis Vuitton monogram">
+            </div>
+            <div class="detail10">
+                <img src="./Assets/LVArticle/detail10.jpg" alt="close up of white Louis Vuitton monogram embroidered cap with netting">
+            </div>
+            <div class="detail11">
+                <img src="./Assets/LVArticle/detail11.jpg" alt="close up of models in various clothing">
+            </div>
+        </div>
+    </div>
+    <!--Start of stage section-->
+    <div class="stageContainer">
+        <div class="stageContent">
+            <!--Details title content-->
+            <div class="stageTitle">
+                <h2>STAGE</h2>            
+            </div>
+            <div class="stageDescription">
+                <p>Imagining a metaphysical space of possibility, the Carreau du Temple in Paris is transformed by the wondrous architecture of the 𝓛𝓸𝓾𝓲𝓼 Dreamhouse™. In this theatrical piece directed and choreographed by Yoann Bourgeois, the show becomes a mind-expanding interior of ideas, prospects and encouragement.</p>
+            </div>
+        </div>   
+    </div>
+    <!--Stage detail slider-->
+    <section class="sliderContainer">
+        <div class="sliderContent">
+            <!--Stage images-->
+            <div id="sliderImages" class="sliderImages">
+                <img class="sliderImage" src="./Assets/LVArticle/stage1.webp" alt="Light blue dining table infront of the Louis Vuitton Dreamhouse set">
+                <img class="sliderImage" src="./Assets/LVArticle/stage2.webp" alt="Light blue staircase from the runway stage">
+                <img class="sliderImage" src="./Assets/LVArticle/stage3.webp" alt="Light blue bedroom from the runway stage">
+                <img class="sliderImage" src="./Assets/LVArticle/stage4.jpg" alt="Close up of the dining table from the runway stage">
+                <img class="sliderImage" src="./Assets/LVArticle/stage5.webp" alt="Close up of the red roof of the Louis Vuitton Dreamhouse">
+            </div>
+            <!--Stage image slider-->
+            <div class="overlayContainer">
+                <button id="leftBtn" onclick="slide(-1)"><i class="fa fa-chevron-left"></i></button>
+                <button id="rightBtn" onclick="slide(1)"><i class="fa fa-chevron-right"></i></button>
+            </div>
+        </div> 
+    </section>
+    <footer>
+        <div class="footerContent">
+            <div class="footerSection1">
+                <!--Company description-->
+                <h2>VAGUE</h2>
+                <p>The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vague.com.</p>
+                <!--Footer social links-->
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerSection2">
+                <!--Footer navigation links-->
+                <h2>NAVIGATION</h2>
+                <ul>
+                    <li><a id="runwayAnchor3" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor3" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor3" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor3" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="footerSection3">
+                <!--Footer support links-->
+                <h2>SUPPORT</h2>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Website copyrights-->
+        <div class="footerEnding">
+            <p>&copy 2022 VAGUE</p>
+        </div>
+    </footer>
+    <script src="Scripts/exclusiveArticle1.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

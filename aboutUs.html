@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <a id="homeAnchor" href="#"><h1>VAGUE</h1></a>
+    </header>
+    <!--Start of navbar-->
+    <section class ="navBar" id="navBar">
+        <div class="navBarContent">
+            <div class="mainNav">
+                <!--Navbar links--> 
+                <ul>
+                    <li><a id="runwayAnchor" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="utilityNav">
+                <!--Hamburger and search feature-->
+                <ul>
+                    <li><a onclick="showSearchPage()"><i class="fa fa-search"></i></a></li>
+                    <li><a onclick="showHamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Search page overlay-->
+    <div id="searchPage" class="searchPage">
+        <div id="crossButton1" class="searchCross" onclick="closeSearchPage()"><i class="fa fa-times"></i></div>
+        <!--Search bar-->
+        <form id="searchForm" class="searchForm">
+            <button type="submit" class="submitButton"><i class="fa fa-search"></i></button>
+            <input class="searchBar" type="Search" placeholder="Search">
+        </form>
+    </div>
+    <!--Hamburger menu overlay-->
+    <div id="hamburgerMenu" class="hamburgerMenu">
+        <div id="crossButton2" class="hamburgerCross" onclick="closeHamburgerMenu()"><i class="fa fa-times"></i></div>
+        <div class="hamburgerContent">
+            <ul class="hamburgerLinks">
+                <!--Hamburger menu links-->
+                <li><a id="runwayAnchor2" href="#">Runway</a></li>
+                <li><a id="metGalaAnchor2" href="#">Met Gala</a></li>
+                <li><a id="collectionAnchor2" href="#">Collections</a></li>
+                <li><a id="aboutAnchor2" href="#">About</a></li>
+            </ul>
+            <div class="hamburgerExtras">
+                <div class="hamburgerSocials">
+                    <!--Hamburger social links-->
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="hamburgerModes">
+                    <!--Night/Light mode options-->
+                    <p>MODE</p>
+                    <ul>
+                        <li id="lightModeBtn"><i class="fa-regular fa-sun"></i></li>
+                        <li id="nightModeBtn"><i class="fa-regular fa-moon"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Start of about us banner-->
+    <div id="aboutUsBanner" class="aboutUsBanner">
+        <img src="./Assets/AboutUs/aboutusbanner.jpeg" alt="Dior Cruise 2021 Campaign">
+        <!--Internation branding tags-->
+        <div class="aboutUsBannerOverlay">
+            <!--First list-->
+            <ul>
+                <li>AUSTRAILIA</li>
+                <li>CHINA</li>
+                <li>FRANCE</li>
+                <li>GERMANY</li>
+                <li>HONG KONG</li>
+                <li>INDIA</li>
+                <li>JAPAN</li>
+                <li>KOREA</li>                
+            </ul>
+            <!--Second list-->
+            <ul>
+                <li>MIDDLE EAST</li>
+                <li>RUSSIA</li>
+                <li>SINGAPORE</li>
+                <li>TAIWAN</li>
+                <li>THAILAND</li>
+                <li>TURKEY</li>
+                <li>U.K.</li>
+                <li>U.S.</li>
+            </ul>
+        </div>
+    </div>
+    <!--Start of about us section-->
+    <section class="aboutUs">
+        <!--About us content-->
+        <div class="aboutUsContent">
+            <h2>About</h2>
+            <p>Vague is a bold, innovative and fashion-forward platform that empowers and inspires readers through intelligent and thought-provoking content to drive change for good. With a passion to bridge fashion with technology, look forward to links from print to digital, and back again, with scannable QR codes and AR-led styling videos to heighten the storytelling experience.</p>
+            <p>Vague readers are change agents with a hunger for fashion and a heart to positively shape future generations. In essence, they are women with a strong sense of style and a strong sense of purpose.</p>
+        </div>
+    </section>
+    <section class="statsContainer">
+        <div class="statsContent">
+            <!--Company statistics-->
+            <div class="globalStats">
+                <div class="title"><h2>Global Footprint</h2></div>
+                <div class="globalStatsInfo">
+                    <div class="readership">
+                        <h3>READERSHIP</h3>
+                        <p>11.7M</p>
+                        <p>Monthly Readers</p>
+                    </div>
+                    <div class="digital">
+                        <h3>DIGITAL</h3>
+                        <p>35.8M</p>
+                        <p>Unique Users</p>
+                    </div>
+                    <div class="social">
+                        <h3>SOCIAL</h3>
+                        <p>103.6M</p>
+                        <p>Followers</p>
+                    </div>
+                </div>
+            </div>
+            <!--Editorial team section-->
+            <div class="teamInfo">
+                <div class="teamInfoTitle">
+                    <h2>Editorial Team</h2>
+                </div>
+                <div class="teamMembers">
+                    <!--editor 1-->
+                    <div id="editor1" class="editorContainer">
+                        <img src="./Assets/AboutUs/editor1.jpeg" alt="Portrait of editor 1">
+                        <h3>Jean Doe</h3>
+                        <p>Editor-in-Chief</p>
+                    </div>
+                    <!--editor 2-->
+                    <div id="editor2" class="editorContainer">
+                        <img src="./Assets/AboutUs/editor2.jpeg" alt="Portrait of editor 2">
+                        <h3>Jean Doe</h3>
+                        <p>Creative Director</p>
+                    </div>
+                    <!--editor 3-->
+                    <div id="editor3" class="editorContainer">
+                        <img src="./Assets/AboutUs/editor3.jpeg" alt="Portrait of editor 3">
+                        <h3>Jean Doe</h3>
+                        <p>Executive Editor</p>
+                    </div>
+                    <!--editor 4-->
+                    <div id="editor4" class="editorContainer">
+                        <img src="./Assets/AboutUs/editor4.jpeg" alt="Portrait of editor 4">
+                        <h3>Jean Doe</h3>
+                        <p>Online Editor</p>
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </section>
+    <!--Start of footer-->      
+    <footer>
+        <div class="footerContent">
+            <div class="footerSection1">
+                <!--Company description-->
+                <h2>VAGUE</h2>
+                <p>The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vague.com.</p>
+                <!--Footer social links-->
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerSection2">
+                <!--Footer navigation links-->
+                <h2>NAVIGATION</h2>
+                <ul>
+                    <li><a id="runwayAnchor3" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor3" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor3" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor3" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="footerSection3">
+                <!--Footer support links-->
+                <h2>SUPPORT</h2>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Website copyrights-->
+        <div class="footerEnding">
+            <p>&copy 2022 VAGUE</p>
+        </div>
+    </footer>
+    <script src="Scripts/script.js"></script>
+    <script src="Scripts/aboutUsScript.js"></script>
+</body>
+</html>

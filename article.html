@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague</title>
+    <!-- <link rel="stylesheet" href="stylesheets/general.css">
+    <link rel="stylesheet" href="stylesheets/article3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <a id="homeAnchor" href="#"><h1>VAGUE</h1></a>
+    </header>
+    <!--Start of navbar-->
+    <section class ="navBar" id="navBar">
+        <div class="navBarContent">
+            <div class="mainNav">
+                <!--Navbar links-->
+                <ul>
+                    <li><a id="runwayAnchor" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="utilityNav">
+                <!--Hamburger and search feature-->
+                <ul>
+                    <li><a onclick="showSearchPage()"><i class="fa fa-search"></i></a></li>
+                    <li><a onclick="showHamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Search page overlay-->
+    <div id="searchPage" class="searchPage">
+        <div id="crossButton1" class="searchCross" onclick="closeSearchPage()"><i class="fa fa-times"></i></div>
+        <!--Search bar-->
+        <form id="searchForm" class="searchForm">
+            <button onclick="startSearch()" type="submit" class="submitButton"><i class="fa fa-search"></i></button>
+            <input id= "userInput" class="searchBar" type="Search" placeholder="Search">
+        </form>
+    </div>
+    <!--Hamburger menu overlay-->
+    <div id="hamburgerMenu" class="hamburgerMenu">
+        <div id="crossButton2" class="hamburgerCross" onclick="closeHamburgerMenu()"><i class="fa fa-times"></i></div>
+        <div class="hamburgerContent">
+            <ul class="hamburgerLinks">
+                <!--Hamburger menu links-->
+                <li><a id="runwayAnchor2" href="#">Runway</a></li>
+                <li><a id="metGalaAnchor2" href="#">Met Gala</a></li>
+                <li><a id="collectionAnchor2" href="#">Collections</a></li>
+                <li><a id="aboutAnchor2" href="#">About</a></li>
+            </ul>
+            <div class="hamburgerExtras">
+                <div class="hamburgerSocials">
+                    <!--Hamburger menu links-->
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="hamburgerModes">
+                    <!--Night/Light mode options-->
+                    <p>MODE</p>
+                    <ul>
+                        <li id="lightModeBtn"><i class="fa-regular fa-sun"></i></li>
+                        <li id="nightModeBtn"><i class="fa-regular fa-moon"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Article banner template-->
+    <script id="templateTitle" type="text/x-handlebars-template">
+        <!--Article banner-->
+        <div id="articleBanner" class="articleBanner">
+            <img src="{{brandImage}}" alt="Overview of fashion show">
+            <!--Banner overylay-->
+            <div id="articleOverlay" class="articleOverlay">
+                <p>{{brandName}}</p>
+                <p>{{collectionDate}}</p>
+                <p>{{collectionSubtitle}}</p>
+            </div>
+        </div>
+    </script>
+
+    <!--Article banner output-->
+    <div id="outputTitle">
+    </div>
+
+    <!--Article body template-->
+    <script id="templateBody" type="text/x-handlebars-template">
+        <div class="articleBody">
+            <!--Article content-->
+            <div class="articleContent">
+                <div class="authorInfo">
+                    <p>{{authorName}}</p>
+                    <p>{{articleDate}}</p>
+                </div>
+                <p>{{articleContent1}}</p>
+                <p>{{articleContent2}}</p>
+                <p>{{articleContent3}}</p>
+                <p>{{articleContent4}}</p>
+                <p>{{articleContent5}}</p>
+                <p>{{articleContent6}}</p>
+            </div>
+            <!--Sidebar recommendations-->
+            <div class="recommendations">
+                <h2>Vague Recommends</h2>
+                <!--Recommended article 1-->
+                <article class="reco">
+                    <!--Content-->
+                    <img src="./Assets/MetGala1.jpg" alt="Megan Thee Stallion getting ready for the Met Gala">
+                    <div class="recoContent">
+                        <p>FASHION</p>
+                        <header>
+                            <h4>Behind Megan Thee Stallion’s Stunning Old Hollywood Met Look</h4>
+                        </header>
+                        <p>BY LIANA SATENSTEIN</p>
+                    </div>
+                </article>
+                <!--Recommended article 2-->
+                <article class="reco">
+                    <!--Content-->
+                    <img src="./Assets/MetGala2.jpg" alt="Rihanna in Balenciaga for the Met Gala">
+                    <div class="recoContent">
+                        <p>CELEBRITY STYLE</p>
+                        <header>
+                            <h4>Of Course Rihanna Shut Down the Red Carpet at the Met Gala</h4>
+                        </header>
+                        <p>BY JANELLE OKWODU</p>
+                    </div>
+                </article>
+                <!--Recommended article 3-->
+                <article class="reco">
+                    <!--Content-->
+                    <img src="./Assets/MetGala4.jpg" alt="Kendall Jenner getting ready for the Met Gala">
+                    <div class="recoContent">
+                        <p>CELEBRITY STYLE</p>
+                        <header>
+                            <h4>Watch Kendall Jenner Get Ready for the Met Gala</h4>
+                        </header>
+                        <p>BY CHRISTIAN ALLAIRE</p>
+                    </div>
+                </article>
+                <!--Recommended article 4-->
+                <article class="reco">
+                    <!--Content-->
+                    <img src="./Assets/MetGala5.jpg" alt="Gigi Hadid in Versace for the Met Gala">
+                    <div class="recoContent">
+                        <p>BEAUTY</p>
+                        <header>
+                            <h4>Gigi Hadid Brings a Bombshell Redhead Beauty Transformation to the 2021 Met Gala</h4>
+                        </header>
+                        <p>BY LAUREN VALENTI</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </script>
+    
+    <!--Article body output-->
+    <div id="outputBody">
+    </div>
+
+    <!--Article collection template-->
+    <script id="templateCollection" type="text/x-handlebars-template">
+        <div class="collection">
+            <header>
+                <p>COLLECTION</p>
+            </header>
+            <!--Collection grid-->
+            <div class="collectionGrid">
+                <img src="{{collectionLook1}}" alt="Collection look 1">
+                <img src="{{collectionLook2}}" alt="Collection look 2">
+                <img src="{{collectionLook3}}" alt="Collection look 3">
+                <img src="{{collectionLook4}}" alt="Collection look 4">
+                <img src="{{collectionLook5}}" alt="Collection look 5">
+                <img src="{{collectionLook6}}" alt="Collection look 6">
+                <img src="{{collectionLook7}}" alt="Collection look 7">
+                <img src="{{collectionLook8}}" alt="Collection look 8">
+            </div>
+        </div>
+    </script>
+
+    <!--Article collection overview output-->
+    <div id="outputCollection">
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerSection1">
+                <!--Company description-->
+                <h2>VAGUE</h2>
+                <p>The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vague.com.</p>
+                <!--Footer social links-->
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerSection2">
+                <!--Footer navigation links-->
+                <h2>NAVIGATION</h2>
+                <ul>
+                    <li><a id="runwayAnchor3" href="#">RUNWAY</a></li>
+                    <li><a id="metGalaAnchor3" href="#">MET GALA</a></li>
+                    <li><a id="collectionAnchor3" href="#">COLLECTIONS</a></li>
+                    <li><a id="aboutAnchor3" href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="footerSection3">
+                <!--Footer support links-->
+                <h2>SUPPORT</h2>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Website copyrights-->
+        <div class="footerEnding">
+            <p>&copy 2022 VAGUE</p>
+        </div>
+    </footer>
+    <script src="Scripts/articleTemplate.js"></script>
+    <script src="Scripts/articleScript.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
